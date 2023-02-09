@@ -5,7 +5,7 @@ PORT = 5050
 FORMAT = 'UTF-8'
 DISSCONECT_MSG = 'disconnect'
 Session=True
-SERVER = "0.0.0.0"
+SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER,PORT)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(ADDR)
